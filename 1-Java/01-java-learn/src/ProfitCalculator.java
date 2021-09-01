@@ -13,4 +13,5 @@ public class ProfitCalculator {
 }
 
 
-//for run, we use shortcut key ctrl+f11 button
+//for run, we use shortcut key ctrl+f11 button.
+//also for proper identation, spacing, click ctrl+shift+F.
