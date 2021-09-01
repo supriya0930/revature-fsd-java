@@ -10,6 +10,7 @@ public class CelsiusCalculation {
       Scanner scanner = new Scanner(System.in);
       
       System.out.println("Enter Fahrenheit value: ");
+      
       int fahrenheitValue= scanner.nextInt();
      // double fahrenheit = scanner.nextDouble();
       

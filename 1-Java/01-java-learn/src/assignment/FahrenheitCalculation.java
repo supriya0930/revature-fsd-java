@@ -12,7 +12,7 @@ public class FahrenheitCalculation {
 		System.out.print("Enter Celsius Value: ");
 		int celsiusValue= scanner.nextInt();
 		
-		int fahrenheit = (int) ((CelsiusValue * 9/5 ) + 32);
+		int fahrenheit = (int) ((celsiusValue * 9/5 ) + 32);
 	    System.out.println("Fahrenheit = " + fahrenheit);			
    
 	}
