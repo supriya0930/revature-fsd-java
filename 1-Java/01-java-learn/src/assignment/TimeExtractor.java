@@ -10,13 +10,19 @@ public class TimeExtractor {
 		// TODO Auto-generated method stub
      
 		Scanner scanner= new Scanner(System.in);
-		System.out.println("Enter time in hh:mm:ss format");
-		int time = scanner.nextInt();
+		System.out.println("Enter time in hour:");
+		int hr = scanner.nextInt();
 		
+		System.out.println("Enter time in minute:");
+		int min = scanner.nextInt();
 		
+		System.out.println("Enter time in seconds:");
+		int sec = scanner.nextInt();
 		
+		System.out.println("Time is :"+hr +":" +min +": +sec");
+		System.out.println("minutes: "+ min);
 		
-		
+			
 	}
 
 }
