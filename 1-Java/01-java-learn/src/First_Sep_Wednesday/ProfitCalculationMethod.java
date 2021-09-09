@@ -7,8 +7,8 @@ public class ProfitCalculationMethod {
 
 		
 		
-		float ashu = profitCalculation(100, 250);
-		System.out.println("profit :" + ashu);
+		float shop = profitCalculation(100, 250);
+		System.out.println("profit :" + shop);
 
 	}
 

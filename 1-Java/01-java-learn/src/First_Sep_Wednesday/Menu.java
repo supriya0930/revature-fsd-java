@@ -21,7 +21,6 @@ public class Menu {
 			int option = scanner.nextInt();
 
 			if (option == 1) {
-
 				System.out.println("Balanace Enquiry");
 			}
 
