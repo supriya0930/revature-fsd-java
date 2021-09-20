@@ -1,0 +1,31 @@
+Few Java Infosys Client questions - asked to one associate
+
+
+
+1.Difference between list and arraylist
+2.How to sort list
+3.Can we insert object in list
+15.Time complexity of arraylist and linkedlist
+18.usage of class.forName().why we don’t this for other class
+
+
+12.difference between primary key and unique key
+13.what is normalization
+22.index in sql
+
+4.providers in angular
+5.use of @injectable in angular and internal working
+6.how ts file convert to js file
+7.what is controller in spring
+8.dependency injection
+9.how JPA repository creates query for custom method
+10.how will handle exception in spring
+11.how many objects will create for a service when we inject the same service in different controller
+
+
+14.Usage of package.json,config.json,angular.json
+16.what is services in angular
+17.which is used to complie ts to js
+19.how will u create a spring project
+20.Flow of rest API
+21.difference between interface and type in angular

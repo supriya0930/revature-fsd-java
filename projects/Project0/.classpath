@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="bank-app-new/src"/>
+	<classpathentry kind="src" path="bank-app/src"/>
+	<classpathentry kind="src" path="chandra_bankapp_code/bank-app-new/src"/>
+	<classpathentry kind="output" path="bank-app/bin"/>
+</classpath>
