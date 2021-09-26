@@ -3,6 +3,7 @@ package com.revature.bankapp.menu; //main menu is child class of menu
 import java.util.Scanner;
 
 import com.revature.bankapp.form.CustomerRegisterationForm;
+import com.revature.bankapp.form.EmployeeLogin;
 import com.revature.bankapp.form.LoginForm;
 import com.revature.bankapp.model.Customer;
 
@@ -39,7 +40,8 @@ public class MainMenu extends Menu {
 			break;
 
 		case 3:
-			System.out.println("Welcome Back!!!");
+			EmployeeLogin empLogin = new EmployeeLogin("Employee Login");
+			empLogin.captureDataAndPerformAction();
 			break;
 		case 4:
 			System.out.println("Closing The Application");

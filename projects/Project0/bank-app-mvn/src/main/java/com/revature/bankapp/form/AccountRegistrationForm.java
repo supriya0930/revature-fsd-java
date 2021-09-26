@@ -34,6 +34,7 @@ public class AccountRegistrationForm extends Form{
 		AccountDaoImpl accountDaoImpl = new AccountDaoImpl();
 		try {
 			accountDaoImpl.create(new Account(an, name, branch, balance ));
+			System.out.println("Account Registered successfully");
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

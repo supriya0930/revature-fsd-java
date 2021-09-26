@@ -1,17 +1,19 @@
-package com.revature.app.dao;
+package com.revature.bankapp.dao;
 
 import java.sql.SQLException;
 import java.util.List;
 
-import com.revature.app.model.Employee;
+import com.revature.bankapp.model.Account;
+import com.revature.bankapp.model.Customer;
+import com.revature.bankapp.model.Transaction;
 
 public interface EmployeeDao {
 	
-	List<Employee> list() throws SQLException;
-	Employee get(int id) throws SQLException;
-	int create(Employee employee) throws SQLException;
-	void update(Employee employee) throws SQLException;
-	void delete(int id) throws SQLException;
+	List<Customer> viewCustomer() throws SQLException;
+	
+	List<Account> viewAccount() throws SQLException;
+	
+	List<Transaction> viewTransaction() throws SQLException;
 	
 	
 }

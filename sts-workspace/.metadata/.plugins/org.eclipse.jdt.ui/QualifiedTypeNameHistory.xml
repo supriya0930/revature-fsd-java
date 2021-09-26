@@ -26,11 +26,12 @@
 <fullyQualifiedTypeName name="org.slf4j.Logger"/>
 <fullyQualifiedTypeName name="com.revature.bankapp.model.DatabaseManager"/>
 <fullyQualifiedTypeName name="com.revature.bankapp.dao.impl.CustomerDaoImpl"/>
-<fullyQualifiedTypeName name="com.revature.bankapp.model.Employee"/>
-<fullyQualifiedTypeName name="java.sql.SQLException"/>
 <fullyQualifiedTypeName name="com.revature.bankapp.dao.impl.AccountDaoImpl"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="com.revature.bankapp.model.ViewAccountsAndTransaction"/>
 <fullyQualifiedTypeName name="com.revature.bankapp.menu.TransactionMenu"/>
 <fullyQualifiedTypeName name="com.revature.bankapp.model.Transaction"/>
+<fullyQualifiedTypeName name="com.revature.bankapp.model.Employee"/>
+<fullyQualifiedTypeName name="java.sql.SQLException"/>
+<fullyQualifiedTypeName name="org.junit.Test"/>
 </qualifiedTypeNameHistroy>

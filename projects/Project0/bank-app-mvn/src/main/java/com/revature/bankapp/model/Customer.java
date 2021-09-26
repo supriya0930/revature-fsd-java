@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class Customer {
 	private long id;
+	private int customerId;
 	private String firstName;
 	private String lastName;
 	private String email;
@@ -26,6 +27,14 @@ public class Customer {
 	static {
 		
 	}
+	
+	public int getCustomerId() {
+		return customerId;
+	}
+
+	public void setCustomerId(int customerId) {
+		this.customerId = customerId;
+	}
 
 	public Customer(String firstName, String lastName, String email, String password) {
 		super();
@@ -39,8 +48,25 @@ public class Customer {
 
 	}
 
+	public Customer() {
+		super();
+	}
+
 	public long getId() {
 		return id;
+	}
+	
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public String getFirstName() {
@@ -81,6 +107,12 @@ public class Customer {
 		return choice;
 	}
 
+	@Override
+	public String toString() {
+		return "Customer [firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + ", password="
+				+ password + "]";
+	}
+	
+
 	
 	}
-

@@ -1,30 +1,29 @@
 package com.revature.bankapp.dao.impl;
 
+import static org.junit.Assert.fail;
 import java.sql.SQLException;
 
 import org.junit.Test;
+
+
 
 import com.revature.bankapp.model.Customer;
 
 class CustomerDaoImplTest {
 
 	@Test
-	void test() throws SQLException {
+	void test() {
 		CustomerDaoImpl dao = new CustomerDaoImpl();
-		Customer customer = new Customer("a","b","c","12");
-		dao.create(customer);
+		Customer customer = new Customer("supriya","singh","supriya@gmail.com","111");
+		try {
+			dao.create(customer);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			fail ("Customer not created");
+			e.printStackTrace();
+		}
 	}
-
-	private void fail(String string) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	private void create(Customer customer) {
-		// TODO Auto-generated method stub
-		
-	}
+	
+	
 
 }
-		
-		

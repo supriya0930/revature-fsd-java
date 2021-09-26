@@ -18,7 +18,6 @@ public class CustomerMenu extends Menu {
 		addMenuItem("View Accounts");
 		addMenuItem("Transactions");
 		addMenuItem("Logout");
-		displayMenuAndCaptureSelection();
 
 	}
 
@@ -42,6 +41,7 @@ public class CustomerMenu extends Menu {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			displayMenuAndCaptureSelection();
 			break;
 			
 		case 3:

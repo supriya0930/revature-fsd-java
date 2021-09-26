@@ -22,7 +22,7 @@ public static int transferAccountId;
 	@Override
 	public void create(Account account) throws SQLException {
 		try (Connection connection = Util.getConnection()) {
-			String sql = "INSERT INTO account ( account_number,name, branch, balance, customer_id) VALUES (?,?,?,?,?)";
+			String sql = "INSERT INTO account ( account_number,name, branch, balance, customer_id, approved) VALUES (?,?,?,?,?,'N')";
 			PreparedStatement preparedStatement = connection.prepareStatement(sql);
 
 			preparedStatement.setString(1, account.getAccountNumber());

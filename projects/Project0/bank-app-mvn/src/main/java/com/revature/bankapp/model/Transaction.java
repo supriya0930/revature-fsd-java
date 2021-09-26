@@ -82,10 +82,10 @@ public class Transaction {
 
 	@Override
 	public String toString() {
-		return "CustomerId: " + customerId + "  Name: " + name + "  Account Number: " + accountNumber
-				+ "  Balance: " + initialAmount + "  Account Id: " + accountId + "  Type: " + type + "  Amount: "
-				+ amount;
+		return "Transaction [accountId=" + accountId + ", type=" + type + ", amount=" + amount + "]";
 	}
+
+
 
 
 	
