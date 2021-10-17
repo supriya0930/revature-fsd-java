@@ -1,0 +1,300 @@
+let signup = document.getElementById("submit");
+let firstName = document.getElementById("first_name");
+let lastName = document.getElementById("last_name");
+let email = document.getElementById("email");
+let password = document.getElementById("password");
+
+
+let form = document.getElementById("signupform");
+let valid = true;
+
+/* signup.addEventListener("click", function () {
+    console.log("clicked");
+    if (firstName.value == "") {
+        console.log("first name error " + valid);
+        console.log(firstName.value);
+
+    
+        valid = false;
+        console.log("first name" + valid);
+    }
+   
+    console.log(firstName.value);
+
+    if(lastName.value == ""){
+        let last = document.getElementById("lastNameError");
+        last.innerText = "Last name is required";
+        valid = false;
+    }
+    console.log("last name" + valid);
+    if(email.value == ""){
+        let mail = document.getElementById("emailValidation");
+        mail.innerText = "email is required";
+        valid = false;
+    }
+    console.log("email" + valid);
+    if(password.value == ""){
+        let pass = document.getElementById("passwordValidation");
+        pass.innerText = "Password is required";
+        valid = false;
+    }
+    console.log("phoneno" + valid);
+    // if(phoneno.value == ""){
+    //     let phno = document.getElementById("phonenoValidation");
+    //     phno.innerText = "PhoneNumber is required";
+    //     valid = false;
+    // }
+
+}); */
+signup.addEventListener("click", function () {
+    console.log("sahhhh");
+    addCustomer();
+  });
+
+
+
+
+    async function addCustomer() {
+        let customer = {
+            firstName: form.first_name.value,
+            lastName: form.last_name.value,
+            email: form.email.value,
+            password: form.password.value,
+           
+
+        };
+
+        var options = {
+            method: 'POST',
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(customer)
+        };
+       // if(valid){
+            console.log("machaa")
+        try {
+            
+            let response = await fetch("http://localhost:8080/bank-app-rest/customers", options);
+            if(response.status == "401"){
+                alert(" login failed");
+                console.log("defvr");
+            }
+            if(response.status == 200){
+               alert(" Customer signup successfull");
+                //display
+            }
+            if(response.status == "500"){
+               alert(" error");
+                //display
+            }
+        } catch (err) {
+        
+
+        }
+    }
+
+
+
+   
+
+
+ /* firstName.addEventListener("keyup", function () {
+   
+    if (firstName.value != "" && firstName.value.length > 20 ) {
+        let firstNameError = document.getElementById("firstNameError");
+        firstNameError.innerText = "First Name cannot exceed 20 characters";
+        valid = false;
+       
+    }
+
+    if (firstName.value != "" && firstName.value.length <= 20) {
+        let firstNameError = document.getElementById("firstNameError");
+        firstNameError.innerText = "";
+        valid = true;
+        
+    }
+
+    if (firstName.value != "") {
+        let pattern = /^[A-Za-z]+$/;
+        // console.log(firstName.value.match(pattern));
+        if (!firstName.value.match(pattern)) {
+            let firstNameError = document.getElementById("firstNameError");
+            firstNameError.innerText = "Numbers not allowed";
+            valid = false;
+           
+        }
+
+    }
+});
+
+lastName.addEventListener("keyup", function () {
+   
+    if (lastName.value != "" && lastName.value.length > 20) {
+        let lastNameError = document.getElementById("lastNameError");
+        lastNameError.innerText = "Last Name cannot exceed 20 characters";
+        valid = false;
+    }
+
+    if (lastName.value != "" && lastName.value.length <= 20) {
+        let lastNameError = document.getElementById("lastNameError");
+        lastNameError.innerText = "";
+        valid = true;
+    }
+
+    if (lastName.value != "") {
+        let pattern = /^[A-Za-z]+$/;
+        // console.log(firstName.value.match(pattern));
+        if (!lastName.value.match(pattern)) {
+            let lastNameError = document.getElementById("lastNameError");
+            lastNameError.innerText = "Numbers not allowed";
+            valid = false;
+        }
+    }
+});
+
+email.addEventListener("keyup",function(){
+    let emailError = document.getElementById("emailValidation");
+  
+    if(email.value != "" && email.value.length > 50){
+      
+        
+        emailError.innerText = "email not allowed";
+        valid = false;
+
+    }
+    if(email.value != "" && email.value.length <=50){
+        emailError.innerText = ""
+        valid = true;
+    }
+
+    if(email.value != ""){
+        let mail = /^\w+([\.-]?\w+)@\w+([\.-]?\w+)(\.\w{2,3})+$/;
+        if(!email.value.match(mail)){
+            emailError.innerText = "invalid Pattern"
+            valid = false;
+
+        }
+    }
+
+
+});
+
+password.addEventListener("keyup" ,function(){
+    
+
+   
+    if(password.value != "" && password.value.length > 15){
+        let pass = document.getElementById("passwordValidation");
+        pass.innerText = "password can not exceed"
+        valid = false;
+        console.log(valid);
+       
+    }
+    if(password.value != "" && password.value.length <= 15 && password.value.length >=5){
+        let pass = document.getElementById("passwordValidation");
+        pass.innerText = "";
+        valid = true;
+        console.log(valid);
+    }
+    if(password.value != ""){
+        let pw =   /^(?=.[0-9])(?=.[!@#$%^&])[a-zA-Z0-9!@#$%^&]{7,15}$/;
+        if(!password.value.match(pw)){
+            let pass = document.getElementById("passwordValidation");
+            pass.innerText = "password can not exceed [7-15]character and use special character and numbers ";
+            valid= false;
+            console.log(valid);
+        }
+    }
+
+});
+
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

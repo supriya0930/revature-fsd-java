@@ -7,11 +7,11 @@ public class ListObjectDemo {
 
 	public static void main(String[] args) {
 		
-		Person person1 = new Person("John", 15);
-		Person person2 = new Person("Smith", 25);
-		Person person3 = new Person("Stella", 32);
-		Person person4 = new Person("Maria", 42);
-		Person person5 = new Person("Mark", 13);
+		Person person1 = new Person();
+		Person person2 = new Person();
+		Person person3 = new Person();
+		Person person4 = new Person();
+		Person person5 = new Person();
 		
 		List<Person> personList = new ArrayList<>();
 		personList.add(person1);
