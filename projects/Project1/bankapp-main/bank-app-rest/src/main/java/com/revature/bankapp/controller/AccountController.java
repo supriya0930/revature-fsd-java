@@ -22,42 +22,42 @@ import com.revature.bankapp.model.Account;
 @Path("/accounts")
 public class AccountController {
 	
-	private static final Logger LOGGER = LoggerFactory.getLogger(CustomerController.class);
-	
-	AccountDaoImpl dao = new AccountDaoImpl();
-	
-	@POST
-	@Consumes(MediaType.APPLICATION_JSON)
-	public Response create(Account account) {
-		LOGGER.info("Start");
-		LOGGER.debug("{}", account);
-		try {
-			dao.create(account);
-			LOGGER.info("End");
-			return Response.ok().build();
-		} catch (AppException e) {
-			return Response.status(500).build();
-		}
-	}
-	@GET
-	@Produces(MediaType.APPLICATION_JSON)
-	public Response get() {
-		try {
-			List<Account> accountList;
-			accountList = dao.accountList();
-			System.out.println(CustomerDaoImpl.currentCustomerId);
-			return Response
-					.ok()
-					.entity(accountList)
-					.build();
-		} catch (SQLException e) {
-			e.printStackTrace();
-			return Response.status(500).build();
-		}
-
-	}
-
-	
-	
-	
+//	private static final Logger LOGGER = LoggerFactory.getLogger(CustomerController.class);
+//	
+//	AccountDaoImpl dao = new AccountDaoImpl();
+//	
+//	@POST
+//	@Consumes(MediaType.APPLICATION_JSON)
+//	public Response create(Account account) {
+//		LOGGER.info("Start");
+//		LOGGER.debug("{}", account);
+//		try {
+//			dao.create(account);
+//			LOGGER.info("End");
+//			return Response.ok().build();
+//		} catch (AppException e) {
+//			return Response.status(500).build();
+//		}
+//	}
+//	@GET
+//	@Produces(MediaType.APPLICATION_JSON)
+//	public Response get() {
+//		try {
+//			List<Account> accountList;
+//			accountList = dao.accountList();
+//			System.out.println(CustomerDaoImpl.currentCustomerId);
+//			return Response
+//					.ok()
+//					.entity(accountList)
+//					.build();
+//		} catch (SQLException e) {
+//			e.printStackTrace();
+//			return Response.status(500).build();
+//		}
+//
+//	}
+//
+//	
+//	
+//	
 }

@@ -1,0 +1,31 @@
+AWS database and ER Diagram - Ashu Pandey
+
+Deployment - Nikhil and Sibghatulla
+
+USER STORIES
+
+Ride Owner
+==========
+1. As a Ride Owner, I want to register using name, address, mobile, mail and personal documents (like license and aadhar), so that I can share my ride. - (Venkata Ramana)
+
+2. As a Ride Owner, I want to login, so that I can access the system. - (Sonia)
+
+3. As a Ride Owner, I want to add preferences and personal behaviour (Aversion to Music, Smoking Allowed, Pets Allowed), so that passengers can select ride owner based on his preferences. - (Radha)
+
+4. As a Ride Owner, I can publish my trip information like destination, origin, departure time, price, date and travelling preferences, so that the Passenger can find his suitable journey. - (Preethi)
+
+Passenger
+=========
+5. As a Passenger, I can register in the system by giving my name , password, email, phone number, date of birth so that I can book ride. - (Supriya)
+
+6. As a Passenger, I want to login, so that I can access the system. - (Pallavi)
+
+7. As a passenger, I want to search based on destination, origin, departure time, date, price budget and car type so that it can filter out the options I have. - (Sahith)
+
+Admin
+=====
+8. As a Admin, I want to verify the driver's details and then approve or reject, so that the Ride Owner can publish his trip and make it available for passengers. - (Arshatulla)
+
+System
+======
+9. As a system, I want to create an admin credentials by default, so that the admin can initially manage the app.

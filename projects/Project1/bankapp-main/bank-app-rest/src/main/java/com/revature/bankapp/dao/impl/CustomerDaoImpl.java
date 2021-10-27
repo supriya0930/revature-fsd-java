@@ -28,7 +28,7 @@ public class CustomerDaoImpl implements CustomerDao {
 		LOGGER.debug("{}",customer);
 		try (Connection connection = Util.getConnection()) {
 	
-			String sql = "insert into customer(First_Name,Last_Name, Email,Password) values (?, ?, ?, ?)";
+			String sql = "insert into customer(first_name,last_name, email,password) values (?, ?, ?, ?)";
 			PreparedStatement statement = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 			statement.setString(1, customer.getFirstName());
 			statement.setString(2, customer.getLastName());
@@ -57,12 +57,12 @@ public class CustomerDaoImpl implements CustomerDao {
 			ResultSet resultSet = statement.executeQuery();
 			while (resultSet.next()) {
 				currentCustomerId = resultSet.getInt("id");
-				String FirstName = resultSet.getString("First_Name");
-				String LastName = resultSet.getString("Last_Name");
-				String email = resultSet.getString("Email");
-				String Password = resultSet.getString("Password");
+				String FirstName = resultSet.getString("first_name");
+				String LastName = resultSet.getString("last_name");
+				String email = resultSet.getString("email");
+				String Password = resultSet.getString("password");
 				
-				customer = new Customer(currentCustomerId,FirstName, LastName ,email,Password,phoneNumber);
+			//	customer = new Customer(currentCustomerId,first_name, last_name ,email,password);
 			}
 		}
 		return customer;
@@ -82,7 +82,7 @@ public class CustomerDaoImpl implements CustomerDao {
 				String LastName = resultSet.getString("Last_Name");
 				String email = resultSet.getString("Email");
 				String Password = resultSet.getString("Password");
-				customer = new Customer( id,FirstName, LastName ,email,Password,phoneNumber);
+			//	customer = new Customer( id,FirstName, LastName ,email,Password);
 			}
 		}
 		return customer;

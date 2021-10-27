@@ -12,7 +12,7 @@ public class Customer {
 	private String password;
 	private static long counter = 0;
 	private ArrayList<Account> accountList;
-    
+	
 
 	private static Account currentAccount;
 

@@ -19,7 +19,7 @@ public class Util {
 			
 			e.printStackTrace();
 		}
-		return DriverManager.getConnection("jdbc:mysql://localhost:3306/bankapp", "root", "Sahith@45");
+		return DriverManager.getConnection("jdbc:mysql://localhost:3306/bankapp", "root", "Turkey1800@");
 
 	}
 

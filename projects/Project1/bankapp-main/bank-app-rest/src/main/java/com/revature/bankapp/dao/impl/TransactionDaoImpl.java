@@ -14,49 +14,49 @@ import com.revature.bankapp.dao.Util;
 public class TransactionDaoImpl implements TransactionDao {
 	//AccountDaoImpl accdao = new AccountDaoImpl();
 
-	public void update(Account account) throws SQLException {
-		try (Connection connection = Util.getConnection()) {
-			String sql = "update account set balance = ? where id = ?";
-			PreparedStatement statement = connection.prepareStatement(sql);
-			statement.setDouble(1, account.getBalance());
-			statement.setInt(2, AccountDaoImpl.currentAccountId);
-			statement.executeUpdate();
-		}
-
-	}
-
-	public void insert(Transaction transaction) throws SQLException {
-		try (Connection connection = Util.getConnection()) {
-			String sql = "insert into transaction (type, amount, accountid) values (?, ?, ?)";
-			PreparedStatement statement = connection.prepareStatement(sql);
-			statement.setString(1, String.valueOf(transaction.getType()));
-			statement.setDouble(2, transaction.getAmount());
-			statement.setInt(3, AccountDaoImpl.currentAccountId);
-			statement.executeUpdate();
-		}
-
-	}
-
-	public static List<Transaction> transactionList() throws SQLException {
-		List<Transaction> transactionList = new ArrayList<>();
-		try (Connection connection = Util.getConnection()) {
-			String sql = "select * from transaction where accountId = ?";
-			PreparedStatement statement = connection.prepareStatement(sql);
-
-			statement.setInt(1, AccountDaoImpl.currentAccountId);
-
-			ResultSet resultSet = statement.executeQuery();
-			while (resultSet.next()) {
-				Transaction trans = new Transaction();
-				trans.setType(resultSet.getString("type").charAt(0));
-				trans.setAmount(resultSet.getDouble("amount"));
-				transactionList.add(trans);
-
-			}
-
-			return transactionList;
-
-		}
-
-	}
+//	public void update(Account account) throws SQLException {
+//		try (Connection connection = Util.getConnection()) {
+//			String sql = "update account set balance = ? where id = ?";
+//			PreparedStatement statement = connection.prepareStatement(sql);
+//			statement.setDouble(1, account.getBalance());
+//			statement.setInt(2, AccountDaoImpl.currentAccountId);
+//			statement.executeUpdate();
+//		}
+//
+//	}
+//
+//	public void insert(Transaction transaction) throws SQLException {
+//		try (Connection connection = Util.getConnection()) {
+//			String sql = "insert into transaction (type, amount, accountid) values (?, ?, ?)";
+//			PreparedStatement statement = connection.prepareStatement(sql);
+//			statement.setString(1, String.valueOf(transaction.getType()));
+//			statement.setDouble(2, transaction.getAmount());
+//			statement.setInt(3, AccountDaoImpl.currentAccountId);
+//			statement.executeUpdate();
+//		}
+//
+//	}
+//
+//	public static List<Transaction> transactionList() throws SQLException {
+//		List<Transaction> transactionList = new ArrayList<>();
+//		try (Connection connection = Util.getConnection()) {
+//			String sql = "select * from transaction where accountId = ?";
+//			PreparedStatement statement = connection.prepareStatement(sql);
+//
+//			statement.setInt(1, AccountDaoImpl.currentAccountId);
+//
+//			ResultSet resultSet = statement.executeQuery();
+//			while (resultSet.next()) {
+//				Transaction trans = new Transaction();
+//				trans.setType(resultSet.getString("type").charAt(0));
+//				trans.setAmount(resultSet.getDouble("amount"));
+//				transactionList.add(trans);
+//
+//			}
+//
+//			return transactionList;
+//
+//		}
+//
+//	}
 }

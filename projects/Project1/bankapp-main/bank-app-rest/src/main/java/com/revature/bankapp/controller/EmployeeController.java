@@ -16,33 +16,33 @@ import com.revature.bankapp.model.Employee;
 
 @Path("/employees/{userName}/{password}")
 public class EmployeeController {
-	@GET
+//	@GET
 //	@Path("/{userName}/{password}")
-	@Produces(MediaType.APPLICATION_JSON)
-	public Response get(@PathParam("userName") String userName, @PathParam("password")  String password) {
-		System.out.println("Employee userName: " + userName);
-		try {
-		
-		   EmployeeDaoImpl empl = new EmployeeDaoImpl();
-			Employee employee = empl. getEmployeeUserName(userName);
-			if (employee == null) {
-				return Response.status(401).build();
-			}
-			else if (employee.getPassword().equals(password)) {
-				System.out.println("Success");
-				return Response
-						.ok()
-						.entity(employee)
-						.build();
-			} else {
-				System.out.println("failed");
-				return Response.status(401).build();
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-			return Response.status(500).build();
-		}
-	
-  
-  }
+//	@Produces(MediaType.APPLICATION_JSON)
+//	public Response get(@PathParam("userName") String userName, @PathParam("password")  String password) {
+//		System.out.println("Employee userName: " + userName);
+//		try {
+//		
+//		   EmployeeDaoImpl empl = new EmployeeDaoImpl();
+//			Employee employee = empl. getEmployeeUserName(name);
+//			if (employee == null) {
+//				return Response.status(401).build();
+//			}
+//			else if (employee.getPassword().equals(password)) {
+//				System.out.println("Success");
+//				return Response
+//						.ok()
+//						.entity(employee)
+//						.build();
+//			} else {
+//				System.out.println("failed");
+//				return Response.status(401).build();
+//			}
+//		} catch (SQLException e) {
+//			e.printStackTrace();
+//			return Response.status(500).build();
+//		}
+//	
+//  
+//  }
 }

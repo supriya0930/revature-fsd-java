@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface EmployeeDao<Customer> {
 	
- List<Customer> viewCustomer() throws SQLException;
+ //List<Customer> viewCustomer() throws SQLException;
 	
 	
 

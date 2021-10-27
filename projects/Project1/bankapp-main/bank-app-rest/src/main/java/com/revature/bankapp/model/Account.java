@@ -3,187 +3,129 @@ package com.revature.bankapp.model;
 import java.sql.SQLException;
 
 import com.revature.bankapp.dao.impl.AccountDaoImpl;
-import com.revature.bankapp.dao.impl.TransactionDaoImpl;
 
 public class Account {
-	
-	
-	protected   String accountNumber;
-	protected  double balance;
-	protected int customerId;
-	protected   String First_Name;
-	protected   String Last_Name;
-	protected   String Email;
-	protected   int id;
+
+	private String accountNumber;
+	private String name;
+	private String branch;
+	private long balance;
+	private boolean success = true;
+	AccountDaoImpl accdao = new AccountDaoImpl();
+
 	public Account() {
-		
-	}
-	TransactionDaoImpl tdao = new TransactionDaoImpl();
-	
-	public Account(String accountNumber, double balance) {
 		super();
-		
+	}
+
+	public Account(String accountNumber, String name, String branch, long balance) {
+		super();
+
+		this.accountNumber = accountNumber;
+		this.name = name;
+		this.branch = branch;
+		this.balance = balance;
+	}
+  
+	public Account(String accountNumber, long balance) {
+		super();
 		this.accountNumber = accountNumber;
 		this.balance = balance;
 	}
-	
-	
-	
-	public int getId() {
-		return id;
+
+	public String getAccountNumber() {
+		return accountNumber;
 	}
 
-
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
-
-
-	public String getFirst_Name() {
-		return First_Name;
-	}
-
-
-	public void setFirst_Name(String first_Name) {
-		First_Name = first_Name;
-	}
-
-
-	
-
-
-	/*public double withdraw(double amount) {
-		if (balance < amount) {
-			System.out.println("Transaction Canont be Implied");}
-		else if (balance >= amount) {
-			balance -= amount;
-			System.out.println(" WithDraw successfull");
-			try {
-				tdao.insert(new Transaction('w',amount));
-				tdao.update(this);
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			}
-			return balance;
-	}
-	
-	/*public double deposit(double amount) {
-		if (amount <= 0) {
-			System.out.println("Transaction Canont be Implied");}
-		else if (balance >= amount) {
-			balance+=amount;
-			System.out.println(" Deposite successfull");
-			
-			try {
-				tdao.insert(new Transaction('d',amount));
-				tdao.update(this);
-			} catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			}
-			return balance;
-	}*/
-	/*public void transfer(double amount) {
-		balance += amount;
-		try {
-			AccountDaoImpl.insertTransfer(new Transaction('C', amount));
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		try {
-			AccountDaoImpl.updateTransfer(this);
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}*/
-
-	
-	
-	
-	
-	
 	public void setAccountNumber(String accountNumber) {
 		this.accountNumber = accountNumber;
 	}
 
-	public void setBalance(double balance) {
-		this.balance = balance;
+	public String getName() {
+		return name;
 	}
 
-	public void setCustomerId(int customerId) {
-		this.customerId = customerId;
+	public void setName(String name) {
+		this.name = name;
 	}
 
-	public  String getAccountNumber() {
-		return accountNumber;
+	public String getBranch() {
+		return branch;
 	}
-	public  double getBalance() {
+
+	public void setBranch(String branch) {
+		this.branch = branch;
+	}
+
+	public long getBalance() {
 		return balance;
 	}
 
-//	public void setBalance(long l) {
-//		this.balance = l;
-//	}
-
-	public int getCustomerId() {
-		return customerId;
+	public void setBalance(long balance) {
+		this.balance = balance;
 	}
-
-
-
-	public String getLast_Name() {
-		return Last_Name;
-	}
-
-
-
-	public void setLast_Name(String last_Name) {
-		Last_Name = last_Name;
-	}
-
-
-
-	public String getEmail() {
-		return Email;
-	}
-
-
-
-	public void setEmail(String email) {
-		Email = email;
-	}
-
-
 
 	@Override
 	public String toString() {
-		return "Account [accountNumber=" + accountNumber + ", balance=" + balance + ", customerId=" + customerId
-				+ ", First_Name=" + First_Name + ", Last_Name=" + Last_Name + ", Email=" + Email + ", id=" + id + "]";
+		return "Account [accountNumber=" + accountNumber + ", name=" + name + ", branch=" + branch + ", balance="
+				+ balance + "]";
 	}
 
-
-
-
-
-	
-
-
-	
-
-	
-
-
-	
-
-	
-	
-	
+//	public double withdraw(double withdrawAmount) {
+//		while (success) {
+//			if (withdrawAmount < 0) {
+//				System.out.println("Enter Amount greater than 0");
+//			} else if (withdrawAmount <= balance) {
+//				balance -= withdrawAmount;
+//				success = false;
+//				try {
+//					accdao.insert(new Transaction('D', withdrawAmount));
+//					accdao.update(this);
+//					System.out.println("Successfull");
+//				} catch (SQLException e) {
+//					e.printStackTrace();
+//				}
+//			} else {
+//				System.out.println("Insufficient funds");
+//			}
+//
+//		}
+//		return balance;
+//	}
+//
+//	public double deposit(double depositAmount) {
+//		while (success) {
+//			if (depositAmount < 0) {
+//				System.out.println("Enter Amount greater than 0");
+//			} else {
+//				balance += depositAmount;
+//				success = false;
+//				try {
+//					accdao.insert(new Transaction('C', depositAmount));
+//					accdao.update(this);
+//					System.out.println("Successfull");
+//				} catch (SQLException e) {
+//					e.printStackTrace();
+//				}
+//			}
+//		}
+//
+//		return balance;
+//	}
+//
+//	public void transfer(double amount) {
+//		balance += amount;
+//		try {
+//			accdao.insertTransfer(new Transaction('C', amount));
+//		} catch (SQLException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//		try {
+//			accdao.updateTransfer(this);
+//		} catch (SQLException e) {
+//			// TODO Auto-generated catch block
+//			e.printStackTrace();
+//		}
+//	}
 
 }

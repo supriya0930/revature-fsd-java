@@ -55,8 +55,8 @@ signup.addEventListener("click", function () {
 
     async function addCustomer() {
         let customer = {
-            first_name: form.first_name.value,
-            last_name: form.last_name.value,
+            firstName: form.first_name.value,
+            lastName: form.last_name.value,
             email: form.email.value,
             password: form.password.value,
             
@@ -71,10 +71,10 @@ signup.addEventListener("click", function () {
             console.log("machaa")
         try {
             let response = await fetch("http://localhost:8080/bank-app-rest/customers", options);
-            //let data = await response.json();
-            // console.log("after getting data");
+            let data = await response.json();
+            console.log(data);
 
-            // console.log("after clearing form");
+            //console.log("after clearing form");
 
 
         } catch (err) {
